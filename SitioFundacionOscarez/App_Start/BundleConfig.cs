@@ -20,12 +20,14 @@ namespace SitioFundacionOscarez
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/jquery.js",
                       "~/Scripts/bootstrap.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.min.css",
-                      "~/Content/modern-business.css"));
+                      "~/Content/modern-business.css",
+                      "~/Content/Oscarez.css"));
         }
     }
 }

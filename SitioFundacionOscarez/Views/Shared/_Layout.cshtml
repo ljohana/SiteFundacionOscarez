@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Fundación Oscarez</title>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -49,12 +46,22 @@
         </div>
     </div>
 
-    <div class="container body-content">
-        @RenderBody()
+    @RenderBody()
+    
+    <div class="container">
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><strong>&copy; @DateTime.Now.Year - Fundación Oscarez</strong></p>
+                    <p><strong>fundacionoscarez@institutooscarez.com.co</strong></p>
+                </div>
+            </div>
         </footer>
-    </div>
+    </div>    
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
