@@ -53,3 +53,5 @@ D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFun
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\obj\Debug\SitioFundacionOscarez.csprojResolveAssemblyReference.cache
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\obj\Debug\SitioFundacionOscarez.dll
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\obj\Debug\SitioFundacionOscarez.pdb
+D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\LibNotificaciones.dll
+D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\LibNotificaciones.pdb
