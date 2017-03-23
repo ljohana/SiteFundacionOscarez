@@ -27,6 +27,7 @@ namespace SitioFundacionOscarez
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.min.css",
                       "~/Content/modern-business.css",
+                      "~/Content/font-awesome.min.css",
                       "~/Content/Oscarez.css"));
         }
     }

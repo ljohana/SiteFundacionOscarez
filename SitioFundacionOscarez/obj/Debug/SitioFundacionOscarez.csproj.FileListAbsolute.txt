@@ -4,6 +4,7 @@ D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFun
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\Antlr3.Runtime.dll
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\EntityFramework.dll
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\EntityFramework.SqlServer.dll
+D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\LibNotificaciones.dll
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\Microsoft.AspNet.Identity.Core.dll
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -27,6 +28,7 @@ D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFun
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\System.Web.WebPages.dll
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\System.Web.WebPages.Razor.dll
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\WebGrease.dll
+D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\LibNotificaciones.pdb
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\System.Web.Helpers.xml
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\System.Web.Mvc.xml
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\System.Web.Optimization.xml
@@ -50,8 +52,7 @@ D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFun
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\Microsoft.Owin.Security.Google.xml
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\obj\Debug\SitioFundacionOscarez.csprojResolveAssemblyReference.cache
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\obj\Debug\SitioFundacionOscarez.dll
 D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\obj\Debug\SitioFundacionOscarez.pdb
-D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\LibNotificaciones.dll
-D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\LibNotificaciones.pdb
+D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\obj\Debug\SitioFundacionOscarez.csprojResolveAssemblyReference.cache
+D:\Personal\Desarrollo Empresas\Paginas Fundacion\Nuevo Sitio Fundacion\SitioFundacionOscarez\SitioFundacionOscarez\bin\WebActivatorEx.dll

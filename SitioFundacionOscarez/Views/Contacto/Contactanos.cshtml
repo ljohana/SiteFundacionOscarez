@@ -1,0 +1,139 @@
+﻿@model SitioFundacionOscarez.Models.Contactenos
+
+@{
+    var Envio = ViewBag.Envio;
+    ViewBag.Title = "Contactenos";
+} 
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+    function initialize() {
+        var fundacion = new google.maps.LatLng(6.255935101740843, -75.56148589999998);
+        var mapOptions = {
+            center: fundacion,
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var mapCanvas = document.getElementById('map');
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(6.255935101740843, -75.56148589999998),
+            map: map,
+            title: 'Fundación Oscarez, fortaleciendo el tejido social'
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Ponte en contacto con nosotros.
+        </h1>
+        <ol class="breadcrumb">
+            <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+            <li class="active">Contactanos</li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div id="map"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Datos de contacto</h3>
+        <p>
+            Av. Oriental<br>Medellín, 3456<br>
+        </p>
+        <p>
+            <i class="glyphicon glyphicon-earphone"></i>
+            <abbr title="Phone"></abbr> (034) 456-7890
+        </p>
+        <p>
+            <i class="glyphicon glyphicon-envelope"></i>
+            <abbr title="Email"></abbr> <a href="mailto:fundacionoscarez@fundacion.com">fundacionoscarez@fundacion.com</a>
+        </p>
+        <p>
+            <i class="glyphicon glyphicon-time"></i>
+            <abbr title="Hours"></abbr> Lunes - Viernes: 8:00 AM a 5:00 PM
+        </p>
+        <ul class="list-unstyled list-inline list-social-icons">
+            <li>
+                <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <h3>Tus inquietudes son importantes para nosotros, envianos un mensaje.</h3>
+        <div class="well">
+            <form name="sentMessage" id="contactForm" action="Contactanos" method="post" novalidate>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true)
+
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Nombre completo</label>
+                            @Html.TextBoxFor(model => model.Nombre, "", new { @class = "form-control", @id = "Nombre", @required = true })
+                            @Html.ValidationMessageFor(model => model.Nombre)
+                        </div>
+                    </div>
+
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Numero Teléfonico:</label>
+                            @Html.TextBoxFor(model => model.email, new { @type = "tel", @class = "form-control", @id = "Telefono", @required = true })
+                            @Html.ValidationMessageFor(model => model.email)
+                        </div>
+                    </div>
+
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Correo Electrónico</label>
+                            @Html.TextBoxFor(model => model.email, new { @type = "email", @class = "form-control", @id = "Email", @required = true })
+                            @Html.ValidationMessageFor(model => model.email)
+                        </div>
+                    </div>
+
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Asunto</label>
+                            @Html.TextBoxFor(model => model.Asunto, new { @class = "form-control", @id = "Asunto", @required = true })
+                            @Html.ValidationMessageFor(model => model.Asunto)
+                        </div>
+                    </div>
+
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Mensaje</label>
+                            @Html.TextAreaFor(model => model.Mensaje, new { @rows = "10", @cols = "100", @class = "form-control", @id = "message", @required = true, @maxlength = "999", @style = "resize:none" })
+                            @Html.ValidationMessageFor(model => model.Mensaje)
+                        </div>
+                    </div>
+
+                    <div id="success"></div>
+
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                }
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    
+
