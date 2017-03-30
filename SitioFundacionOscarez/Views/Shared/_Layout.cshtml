@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Fundación Oscarez</title>
 
@@ -26,6 +27,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quienes somos<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Nuestra Historia", "QuienesSomos", "Home")</li>
+                            <li>@Html.ActionLink("Nuestra Experiencia", "NuestraExperiencia", "Home")</li>
                             <li><a href="http://www.institutooscarez.com.co/" target="_blank">Instituto Oscarez</a></li>
                         </ul>
                     </li>
@@ -38,10 +40,10 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Actialidad <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Actualidad <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Noticias", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("Portafolio", "Contact", "Home")</li>
+                            <li><a href="https://issuu.com/fundacionoscarez/docs/pda_oscarez?workerAddress=ec2-52-23-209-43.compute-1.amazonaws.com" target="_blank">Portafolio</a></li>
                             <li>@Html.ActionLink("Informe Gestión", "Contact", "Home")</li>
                         </ul>
                     </li>

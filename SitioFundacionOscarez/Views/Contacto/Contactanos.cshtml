@@ -4,7 +4,8 @@
     var Envio = ViewBag.Envio;
     ViewBag.Title = "Contactenos";
 } 
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVqsD0jUV8-pHbMGwYQhj_7LenK_6sBAY"></script>
 <script>
     function initialize() {
         var fundacion = new google.maps.LatLng(6.255935101740843, -75.56148589999998);
@@ -23,9 +24,8 @@
         });
     }
     google.maps.event.addDomListener(window, 'load', initialize);
+
 </script>
-
-
 
 <div class="row">
     <div class="col-lg-12">
@@ -46,15 +46,15 @@
     <div class="col-md-4">
         <h3>Datos de contacto</h3>
         <p>
-            Av. Oriental<br>Medellín, 3456<br>
+            Carrera 47 # 59-66<br>Medellín, Una cuadra arriba de la oriental<br>
         </p>
         <p>
             <i class="glyphicon glyphicon-earphone"></i>
-            <abbr title="Phone"></abbr> (034) 456-7890
+            <abbr title="Phone"></abbr> (034) 322-35-74
         </p>
         <p>
             <i class="glyphicon glyphicon-envelope"></i>
-            <abbr title="Email"></abbr> <a href="mailto:fundacionoscarez@fundacion.com">fundacionoscarez@fundacion.com</a>
+            <abbr title="Email"></abbr> <a href="mailto:fundacionoscarez@institutooscarez.com.co">fundacionoscarez@institutooscarez.com.co</a>
         </p>
         <p>
             <i class="glyphicon glyphicon-time"></i>
@@ -95,17 +95,17 @@
 
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Numero Teléfonico:</label>
-                            @Html.TextBoxFor(model => model.email, new { @type = "tel", @class = "form-control", @id = "Telefono", @required = true })
+                            <label>Correo Electrónico:</label>
+                            @Html.TextBoxFor(model => model.email, new { @type = "email", @class = "form-control", @id = "Email", @required = true })
                             @Html.ValidationMessageFor(model => model.email)
                         </div>
                     </div>
 
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Correo Electrónico</label>
-                            @Html.TextBoxFor(model => model.email, new { @type = "email", @class = "form-control", @id = "Email", @required = true })
-                            @Html.ValidationMessageFor(model => model.email)
+                            <label>Numero Teléfonico</label>
+                            @Html.TextBoxFor(model => model.Telefono, new { @type = "tel", @class = "form-control", @id = "Telefono", @required = true })
+                            @Html.ValidationMessageFor(model => model.Telefono)
                         </div>
                     </div>
 
@@ -125,7 +125,18 @@
                         </div>
                     </div>
 
-                    <div id="success"></div>
+                    <div class="control-group form-group">
+                        @Html.CheckBox("Acepta terminos y condiciones", false, new {@required = true })
+                        <label>Acepta terminos y condiciones</label>
+                    </div>
+
+                    if (Envio == true)
+                    {
+                        <div class="alert alert-success  alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>Gracias por escribirnos,</strong> tu mensaje ha sido enviado de forma exitosa, pronto nos comunicaremos contigo.
+                        </div>
+                    }
 
                     <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                 }
@@ -133,7 +144,6 @@
         </div>
     </div>
 </div>
-
 
     
 
