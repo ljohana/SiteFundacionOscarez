@@ -2,7 +2,7 @@
     ViewBag.Title = "Fundación Oscarez";
 }
 
-    <!-- Marketing Icons Section -->
+
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
@@ -10,28 +10,28 @@
         </h1>
     </div>
     <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyecto.jpg" alt="">
+        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Pre saber 11" data-trigger="hover">
+            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Pre_saber.jpg" alt="Pre saber">
         </a>
     </div>
     <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyecto.jpg" alt="">
+        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Curso para docentes" data-trigger="hover">
+            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Curso_docentes.jpg" alt="Curso docentes">
         </a>
     </div>
     <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyecto.jpg" alt="">
+        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Secuencias de clases" data-trigger="hover">
+            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Secuencias_clases.jpg" alt="Secuencias de clases">
         </a>
     </div>
     <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyecto.jpg" alt="">
+        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Gestion Curricular" data-trigger="hover">
+            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Gestion_curricular.jpg" alt="Gestion curricular">
         </a>
     </div>
     <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyecto.jpg" alt="">
+        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Tu proyecto de vida" data-trigger="hover">
+            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Tu_proyecto.jpg" alt="Tu proyecto de vida">
         </a>
     </div>
     <div class="col-md-4 col-sm-6">
@@ -45,10 +45,18 @@
 <div class="well">
     <div class="row">
         <div class="col-md-8">
-            <p>Visita la pagina web de nuestro instituto oscarez para el saber</p>
+            <p style="font-size: 24px; margin: 6px 10px 0px; text-align:center">Visita la pagina web de nuestro instituto oscarez para el saber</p>
         </div>
         <div class="col-md-4">
             <a class="btn btn-lg btn-default btn-block" href="http://www.institutooscarez.com.co/" target="_blank">Institución Oscarez</a>
         </div>
     </div>
 </div>
+
+@section Scripts{
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>    
+}

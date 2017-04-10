@@ -167,17 +167,15 @@
     <Compile Include="App_Start\FontAwesomeBundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NoticiasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contactenos.cs">
       <DependentUpon>ModeloFundacion.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Metadata.cs" />
     <Compile Include="Models\ModeloFundacion.Context.cs">
       <AutoGen>True</AutoGen>
@@ -218,6 +216,12 @@
     <Content Include="Global.asax" />
     <Content Include="Images\campus.png" />
     <Content Include="Images\one.png" />
+    <Content Include="Images\proyectos\Curso_docentes.jpg" />
+    <Content Include="Images\proyectos\Gestion_curricular.jpg" />
+    <Content Include="Images\proyectos\Pre_saber.jpg" />
+    <Content Include="Images\proyectos\Secuencias_clases.jpg" />
+    <Content Include="Images\proyectos\Tu_proyecto.jpg" />
+    <Content Include="Images\resena\Institucion.jpg" />
     <Content Include="Models\ModeloFundacion.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModeloFundacion.edmx</DependentUpon>
@@ -277,25 +281,22 @@
     <Content Include="Views\Home\QuienesSomos.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Contacto\Contactanos.cshtml" />
     <Content Include="Views\Contacto\Delete.cshtml" />
     <Content Include="Views\Contacto\Details.cshtml" />
     <Content Include="Views\Contacto\Edit.cshtml" />
     <Content Include="Views\Contacto\Index.cshtml" />
     <Content Include="Views\Home\NuestraExperiencia.cshtml" />
+    <Content Include="Views\Noticias\Create.cshtml" />
+    <Content Include="Views\Noticias\Delete.cshtml" />
+    <Content Include="Views\Noticias\Details.cshtml" />
+    <Content Include="Views\Noticias\Edit.cshtml" />
+    <Content Include="Views\Noticias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\noticias\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
