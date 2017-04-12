@@ -28,5 +28,9 @@ namespace SitioFundacionOscarez.Models
         public virtual DbSet<Contactenos> Contactenos { get; set; }
         public virtual DbSet<Noticias> Noticias { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<CaracteristicasxProyecto> CaracteristicasxProyecto { get; set; }
+        public virtual DbSet<Proyectos> Proyectos { get; set; }
+        public virtual DbSet<ResultadosxProyecto> ResultadosxProyecto { get; set; }
+        public virtual DbSet<Secciones> Secciones { get; set; }
     }
 }

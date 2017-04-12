@@ -170,8 +170,12 @@
     <Compile Include="Controllers\ContactoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NoticiasController.cs" />
+    <Compile Include="Controllers\ProyectosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaracteristicasxProyecto.cs">
+      <DependentUpon>ModeloFundacion.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Contactenos.cs">
       <DependentUpon>ModeloFundacion.tt</DependentUpon>
@@ -196,6 +200,15 @@
       <DependentUpon>ModeloFundacion.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PartialClass.cs" />
+    <Compile Include="Models\Proyectos.cs">
+      <DependentUpon>ModeloFundacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ResultadosxProyecto.cs">
+      <DependentUpon>ModeloFundacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Secciones.cs">
+      <DependentUpon>ModeloFundacion.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Usuarios.cs">
       <DependentUpon>ModeloFundacion.tt</DependentUpon>
     </Compile>
@@ -292,6 +305,11 @@
     <Content Include="Views\Noticias\Details.cshtml" />
     <Content Include="Views\Noticias\Edit.cshtml" />
     <Content Include="Views\Noticias\Index.cshtml" />
+    <Content Include="Views\Proyectos\Create.cshtml" />
+    <Content Include="Views\Proyectos\Delete.cshtml" />
+    <Content Include="Views\Proyectos\Details.cshtml" />
+    <Content Include="Views\Proyectos\Edit.cshtml" />
+    <Content Include="Views\Proyectos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

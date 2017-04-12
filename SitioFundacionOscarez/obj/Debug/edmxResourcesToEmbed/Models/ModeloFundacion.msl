@@ -38,5 +38,45 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CaracteristicasxProyecto">
+      <EntityTypeMapping TypeName="DbFundacionModel.CaracteristicasxProyecto">
+        <MappingFragment StoreEntitySet="CaracteristicasxProyecto">
+          <ScalarProperty Name="Caracteristica" ColumnName="Caracteristica" />
+          <ScalarProperty Name="CodProyecto" ColumnName="CodProyecto" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proyectos">
+      <EntityTypeMapping TypeName="DbFundacionModel.Proyectos">
+        <MappingFragment StoreEntitySet="Proyectos">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="ImagenProyecto" ColumnName="ImagenProyecto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Subtitulo" ColumnName="Subtitulo" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="CodSeccion" ColumnName="CodSeccion" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResultadosxProyecto">
+      <EntityTypeMapping TypeName="DbFundacionModel.ResultadosxProyecto">
+        <MappingFragment StoreEntitySet="ResultadosxProyecto">
+          <ScalarProperty Name="Resultados" ColumnName="Resultados" />
+          <ScalarProperty Name="CodProyecto" ColumnName="CodProyecto" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Secciones">
+      <EntityTypeMapping TypeName="DbFundacionModel.Secciones">
+        <MappingFragment StoreEntitySet="Secciones">
+          <ScalarProperty Name="Seccion" ColumnName="Seccion" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

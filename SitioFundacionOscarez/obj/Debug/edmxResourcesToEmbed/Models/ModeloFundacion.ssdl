@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DbFundacionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CaracteristicasxProyecto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodProyecto" Type="int" Nullable="false" />
+    <Property Name="Caracteristica" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
   <EntityType Name="Contactenos">
     <Key>
       <PropertyRef Name="ID" />
@@ -23,6 +31,34 @@
     <Property Name="Slide" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="FechaCreacion" Type="datetime" StoreGeneratedPattern="Computed" Nullable="false" />
   </EntityType>
+  <EntityType Name="Proyectos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodSeccion" Type="tinyint" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Subtitulo" Type="varchar" MaxLength="100" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="3000" Nullable="false" />
+    <Property Name="ImagenProyecto" Type="varchar" MaxLength="20" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ResultadosxProyecto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodProyecto" Type="int" Nullable="false" />
+    <Property Name="Resultados" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Secciones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Seccion" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
   <EntityType Name="Usuarios">
     <Key>
       <PropertyRef Name="Usuario" />
@@ -35,8 +71,12 @@
     <Property Name="Email" Type="varchar" MaxLength="80" Nullable="false" />
   </EntityType>
   <EntityContainer Name="DbFundacionModelStoreContainer">
+    <EntitySet Name="CaracteristicasxProyecto" EntityType="Self.CaracteristicasxProyecto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contactenos" EntityType="Self.Contactenos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Noticias" EntityType="Self.Noticias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proyectos" EntityType="Self.Proyectos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResultadosxProyecto" EntityType="Self.ResultadosxProyecto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Secciones" EntityType="Self.Secciones" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
