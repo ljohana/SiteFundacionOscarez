@@ -1,0 +1,48 @@
+﻿@model SitioFundacionOscarez.Models.Proyectos
+
+@{
+    ViewBag.Title = "Programas para estudiantes";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Que hacemos <small> - programas para estudiantes</small></h2>
+        <ol class="breadcrumb">
+            <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+            <li class="active">Programas para estudiantes</li>
+        </ol>
+    </div>
+</div>
+
+@if (@ViewBag.Error == null)
+{
+    if (@ViewBag.Proyectos != null)
+    {
+        foreach (var item in @ViewBag.Proyectos)
+        {
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#">
+                        <img class="img-responsive img-hover" src="/Images/proyectos/@item.ImagenProyecto" alt="@item.Titulo" style="width: 700px;height: 300px;">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3>@item.Titulo</h3>
+                    <h4>@item.Subtitulo</h4>
+                    <p>
+                        @MvcHtmlString.Create(@item.Descripcion.Substring(0, 350)).... <strong>(click en el botón para leer más)</strong>
+                    </p>
+                    <a class="btn btn-primary" href="#">Ver el proyecto</a>
+                </div>
+            </div>
+            <hr>
+        }
+    }
+}
+else
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Atención! </strong> @ViewBag.Error
+    </div> 
+}

@@ -16,6 +16,23 @@ namespace SitioFundacionOscarez.Controllers
     {
         private DbFundacionEntities db = new DbFundacionEntities();
 
+        [AllowAnonymous]
+        //GET
+        public ActionResult ProyectosEstudiantes()
+        {
+            if (db.Database.Exists())
+            {
+                var CodSeccion = (from s in db.Secciones where s.Seccion.ToUpper() == "PROGRAMAS PARA ESTUDIANTES" select s.id).FirstOrDefault();
+                ViewBag.Proyectos = (from p in db.Proyectos where p.CodSeccion == CodSeccion select p).ToList();
+                return View();
+            }
+            else
+            {
+                ViewBag.Error = "Se ha generado un error de conexión con la base de datos, por favor intentelo de nuevo en unos minutos.";
+                return View();
+            }
+        }
+
         // GET: /Proyectos/
         public ActionResult Index()
         {

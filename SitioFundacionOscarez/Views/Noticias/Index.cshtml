@@ -2,7 +2,6 @@
 
 @{
     ViewBag.Title = "Ultimas noticias fundación";
-    var Error = ViewBag.Error;
 }
 
 <div class="row">
@@ -15,7 +14,7 @@
     </div>
 </div>
 
-@if (Error == null)
+@if (@ViewBag.Error == null)
 {
     foreach (var item in Model)
     {
@@ -27,7 +26,7 @@
                 <p>@item.FechaCreacion</p>
             </div>
             <div class="col-md-5">
-                <img class="img-responsive img-hover" src="Images/noticias/@item.Slide" alt="@item.Titulo">
+                <img class="img-responsive img-hover" src="/Images/noticias/@item.Slide" alt="@item.Titulo">
             </div>
             <div class="col-md-6">
                 <h3>
@@ -42,11 +41,13 @@
         </div>
         <hr>
     }
-
 }
 else
 {
-
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Atención! </strong> @ViewBag.Error
+    </div>
 }
 
 
