@@ -49,7 +49,7 @@ namespace SitioFundacionOscarez.Controllers
         [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Contactanos([Bind(Include = "ID,Nombre,email,Telefono,Asunto,Mensaje,FechaSolicitud")] Contactenos contactenos)
+        public ActionResult Contactanos([Bind(Include = "ID,Nombre,email,Telefono,Asunto,Mensaje,FechaSolicitud,AvisoPrivacidad")] Contactenos contactenos)
         {
             if (ModelState.IsValid)
             {

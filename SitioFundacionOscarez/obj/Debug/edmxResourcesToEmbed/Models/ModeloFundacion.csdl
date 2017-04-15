@@ -11,6 +11,7 @@
     <Property Name="Asunto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Mensaje" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="FechaSolicitud" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AvisoPrivacidad" Type="Boolean" Nullable="false" />
   </EntityType>
   <EntityType Name="Noticias">
     <Key>
@@ -60,7 +61,7 @@
     <Property Name="Titulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Subtitulo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="3000" FixedLength="false" Unicode="false" />
-    <Property Name="ImagenProyecto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ImagenProyecto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
     <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
   </EntityType>

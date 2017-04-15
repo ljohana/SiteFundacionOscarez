@@ -29,8 +29,8 @@
                 <div class="col-md-5">
                     <h3>@item.Titulo</h3>
                     <h4>@item.Subtitulo</h4>
-                    <p>
-                        @MvcHtmlString.Create(@item.Descripcion.Substring(0, 350)).... <strong>(click en el botón para leer más)</strong>
+                    <p style=" text-align: justify;">
+                        @MvcHtmlString.Create(@item.Descripcion.Substring(0, 350)) ... <strong>(click en el botón para leer más)</strong>
                     </p>
                     <a class="btn btn-primary" href="#">Ver el proyecto</a>
                 </div>
@@ -41,8 +41,10 @@
 }
 else
 {
-    <div class="alert alert-warning alert-dismissible" role="alert">
+    <div class="alert alert-danger alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong>Atención! </strong> @ViewBag.Error
-    </div> 
+        <strong>Sr Usuario! </strong>
+        <br />
+        @ViewBag.Error
+    </div>
 }

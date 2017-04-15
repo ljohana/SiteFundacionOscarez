@@ -33,6 +33,38 @@ namespace SitioFundacionOscarez.Controllers
             }
         }
 
+        [AllowAnonymous]
+        public ActionResult ProyectosInstitucionales()
+        {
+            if (db.Database.Exists())
+            {
+                var CodSeccion = (from s in db.Secciones where s.Seccion.ToUpper() == "PROYECTOS INSTITUCIONALES" select s.id).FirstOrDefault();
+                ViewBag.Proyectos = (from p in db.Proyectos where p.CodSeccion == CodSeccion select p).ToList();
+                return View();
+            }
+            else
+            {
+                ViewBag.Error = "Se ha generado un error de conexión con la base de datos, por favor intentelo de nuevo en unos minutos.";
+                return View();
+            }
+        }
+
+        [AllowAnonymous]
+        public ActionResult ProyectosFortalecimiento()
+        {
+            if (db.Database.Exists())
+            {
+                var CodSeccion = (from s in db.Secciones where s.Seccion.ToUpper() == "FORTALECIMIENTO SOCIAL" select s.id).FirstOrDefault();
+                ViewBag.Proyectos = (from p in db.Proyectos where p.CodSeccion == CodSeccion select p).ToList();
+                return View();
+            }
+            else
+            {
+                ViewBag.Error = "Se ha generado un error de conexión con la base de datos, por favor intentelo de nuevo en unos minutos.";
+                return View();
+            }
+        }
+
         // GET: /Proyectos/
         public ActionResult Index()
         {

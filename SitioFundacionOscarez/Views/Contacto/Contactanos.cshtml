@@ -89,7 +89,7 @@
                         <div class="controls">
                             <label>Nombre completo</label>
                             @Html.TextBoxFor(model => model.Nombre, "", new { @class = "form-control", @id = "Nombre", @required = true })
-                            @Html.ValidationMessageFor(model => model.Nombre)
+                            @Html.ValidationMessageFor(model => model.Nombre, null, new { @class = "label label-danger", @style = "font-size: 85%;" })
                         </div>
                     </div>
 
@@ -97,7 +97,7 @@
                         <div class="controls">
                             <label>Correo Electrónico:</label>
                             @Html.TextBoxFor(model => model.email, new { @type = "email", @class = "form-control", @id = "Email", @required = true })
-                            @Html.ValidationMessageFor(model => model.email)
+                            @Html.ValidationMessageFor(model => model.email, null, new { @class = "label label-danger", @style = "font-size: 85%;" })
                         </div>
                     </div>
 
@@ -105,7 +105,7 @@
                         <div class="controls">
                             <label>Numero Teléfonico</label>
                             @Html.TextBoxFor(model => model.Telefono, new { @type = "tel", @class = "form-control", @id = "Telefono", @required = true })
-                            @Html.ValidationMessageFor(model => model.Telefono)
+                            @Html.ValidationMessageFor(model => model.Telefono, null, new { @class = "label label-danger", @style = "font-size: 85%;" })
                         </div>
                     </div>
 
@@ -113,7 +113,7 @@
                         <div class="controls">
                             <label>Asunto</label>
                             @Html.TextBoxFor(model => model.Asunto, new { @class = "form-control", @id = "Asunto", @required = true })
-                            @Html.ValidationMessageFor(model => model.Asunto)
+                            @Html.ValidationMessageFor(model => model.Asunto, null, new { @class = "label label-danger", @style = "font-size: 85%;" })
                         </div>
                     </div>
 
@@ -121,13 +121,15 @@
                         <div class="controls">
                             <label>Mensaje</label>
                             @Html.TextAreaFor(model => model.Mensaje, new { @rows = "10", @cols = "100", @class = "form-control", @id = "message", @required = true, @maxlength = "999", @style = "resize:none" })
-                            @Html.ValidationMessageFor(model => model.Mensaje)
+                            @Html.ValidationMessageFor(model => model.Mensaje, null, new { @class = "label label-danger", @style = "font-size: 85%;" })
                         </div>
                     </div>
 
                     <div class="control-group form-group">
-                        @Html.CheckBox("Acepta terminos y condiciones", false, new {@required = true })
-                        <label>Acepta terminos y condiciones</label>
+                        @Html.CheckBoxFor(model => model.AvisoPrivacidad)
+                        @Html.LabelFor(model => model.AvisoPrivacidad)
+                        <br />
+                        @Html.ValidationMessageFor(model => model.AvisoPrivacidad, null, new { @class = "label label-danger", @style = "font-size: 85%;" })
                     </div>
 
                     if (Envio == true)

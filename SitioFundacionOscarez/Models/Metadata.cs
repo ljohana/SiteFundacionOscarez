@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace SitioFundacionOscarez.Models
 {
@@ -23,5 +25,9 @@ namespace SitioFundacionOscarez.Models
 
         [Required(ErrorMessage = "Este campo es requerido")]
         public string Mensaje { get; set; }
+
+        [Display(Name = "Aviso de privacidad")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "Debe marcar para aceptar la opción de aviso de privacidad.")]
+        public bool AvisoPrivacidad { get; set; }
     }
 }

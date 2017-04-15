@@ -24,6 +24,7 @@
           <Property Name="Asunto" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Mensaje" Type="varchar" MaxLength="1000" Nullable="false" />
           <Property Name="FechaSolicitud" Type="datetime" Nullable="false" />
+          <Property Name="AvisoPrivacidad" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Noticias">
           <Key>
@@ -45,7 +46,7 @@
           <Property Name="Titulo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Subtitulo" Type="varchar" MaxLength="100" />
           <Property Name="Descripcion" Type="varchar" MaxLength="3000" Nullable="false" />
-          <Property Name="ImagenProyecto" Type="varchar" MaxLength="20" />
+          <Property Name="ImagenProyecto" Type="varchar" MaxLength="50" />
           <Property Name="FechaCreacion" Type="datetime" />
           <Property Name="FechaModificacion" Type="datetime" />
         </EntityType>
@@ -99,6 +100,7 @@
           <Property Name="Asunto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Mensaje" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="FechaSolicitud" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AvisoPrivacidad" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Noticias">
           <Key>
@@ -148,7 +150,7 @@
           <Property Name="Titulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Subtitulo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="3000" FixedLength="false" Unicode="false" />
-          <Property Name="ImagenProyecto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ImagenProyecto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
           <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
         </EntityType>
@@ -176,6 +178,7 @@
           <EntitySetMapping Name="Contactenos">
             <EntityTypeMapping TypeName="DbFundacionModel.Contactenos">
               <MappingFragment StoreEntitySet="Contactenos">
+                <ScalarProperty Name="AvisoPrivacidad" ColumnName="AvisoPrivacidad" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="email" ColumnName="email" />

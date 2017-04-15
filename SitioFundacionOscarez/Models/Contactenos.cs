@@ -21,5 +21,6 @@ namespace SitioFundacionOscarez.Models
         public string Asunto { get; set; }
         public string Mensaje { get; set; }
         public System.DateTime FechaSolicitud { get; set; }
+        public bool AvisoPrivacidad { get; set; }
     }
 }

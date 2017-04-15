@@ -19,6 +19,7 @@
     <Property Name="Asunto" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Mensaje" Type="varchar" MaxLength="1000" Nullable="false" />
     <Property Name="FechaSolicitud" Type="datetime" Nullable="false" />
+    <Property Name="AvisoPrivacidad" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Noticias">
     <Key>
@@ -40,7 +41,7 @@
     <Property Name="Titulo" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Subtitulo" Type="varchar" MaxLength="100" />
     <Property Name="Descripcion" Type="varchar" MaxLength="3000" Nullable="false" />
-    <Property Name="ImagenProyecto" Type="varchar" MaxLength="20" />
+    <Property Name="ImagenProyecto" Type="varchar" MaxLength="50" />
     <Property Name="FechaCreacion" Type="datetime" />
     <Property Name="FechaModificacion" Type="datetime" />
   </EntityType>

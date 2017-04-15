@@ -311,6 +311,8 @@
     <Content Include="Views\Proyectos\Edit.cshtml" />
     <Content Include="Views\Proyectos\Index.cshtml" />
     <Content Include="Views\Proyectos\ProyectosEstudiantes.cshtml" />
+    <Content Include="Views\Proyectos\ProyectosInstitucionales.cshtml" />
+    <Content Include="Views\Proyectos\ProyectosFortalecimiento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

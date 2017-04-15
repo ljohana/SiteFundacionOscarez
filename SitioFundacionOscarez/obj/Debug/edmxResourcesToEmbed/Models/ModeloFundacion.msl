@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Contactenos">
       <EntityTypeMapping TypeName="DbFundacionModel.Contactenos">
         <MappingFragment StoreEntitySet="Contactenos">
+          <ScalarProperty Name="AvisoPrivacidad" ColumnName="AvisoPrivacidad" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="email" ColumnName="email" />

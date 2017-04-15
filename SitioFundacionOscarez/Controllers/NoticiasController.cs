@@ -33,6 +33,7 @@ namespace SitioFundacionOscarez.Controllers
             }
         }
 
+        [AllowAnonymous]
         // GET: /Noticias/Details/5
         public ActionResult Details(int? id)
         {
