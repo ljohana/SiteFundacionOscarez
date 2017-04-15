@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\ContactoController.cs" />
+    <Compile Include="Controllers\ConvocatoriasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NoticiasController.cs" />
     <Compile Include="Controllers\ProyectosController.cs" />
@@ -292,7 +293,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\QuienesSomos.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contacto\Contactanos.cshtml" />
     <Content Include="Views\Contacto\Delete.cshtml" />
@@ -313,11 +313,11 @@
     <Content Include="Views\Proyectos\ProyectosEstudiantes.cshtml" />
     <Content Include="Views\Proyectos\ProyectosInstitucionales.cshtml" />
     <Content Include="Views\Proyectos\ProyectosFortalecimiento.cshtml" />
+    <Content Include="Views\Convocatorias\Convocatorias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\noticias\" />
-    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

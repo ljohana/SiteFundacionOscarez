@@ -22,7 +22,7 @@
         {
             <div class="row">
                 <div class="col-md-7">
-                    <a href="#">
+                    <a href='@Url.Action("Details", "Proyectos", new { id = @item.id, fuente = "ProyectosEstudiantes" })'>
                         <img class="img-responsive img-hover" src="/Images/proyectos/@item.ImagenProyecto" alt="@item.Titulo" style="width: 700px;height: 300px;">
                     </a>
                 </div>
@@ -32,7 +32,7 @@
                     <p style=" text-align: justify;">
                         @MvcHtmlString.Create(@item.Descripcion.Substring(0, 350)) ... <strong>(click en el botón para leer más)</strong>
                     </p>
-                    <a class="btn btn-primary" href="#">Ver el proyecto</a>
+                    <a class="btn btn-primary" href='@Url.Action("Details", "Proyectos", new { id = @item.id, fuente = "ProyectosEstudiantes" })'>Ver el proyecto</a>
                 </div>
             </div>
             <hr>

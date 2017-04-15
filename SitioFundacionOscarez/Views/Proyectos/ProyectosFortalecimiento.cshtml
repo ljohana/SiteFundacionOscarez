@@ -26,10 +26,10 @@
                 @:<div class="row">
             }
             <div class="col-md-4 img-portfolio">
-                <a href="/Details/@item.id">
+                <a href='@Url.Action("Details", "Proyectos", new { id = @item.id, fuente = "ProyectosFortalecimiento" })'>
                     <img class="img-responsive img-hover" src="/Images/proyectos/@item.ImagenProyecto" alt="Proyectos/Details/@item.Titulo">
                 </a>
-                <h3><a href="/Details/@item.id">@item.Titulo</a></h3>
+                <h3><a href='@Url.Action("Details", "Proyectos", new { id = @item.id, fuente = "ProyectosFortalecimiento" })'>@item.Titulo</a></h3>
                 <p style=" text-align: justify;">
                     @MvcHtmlString.Create(@item.Descripcion.Substring(0, 100)) ...
                 </p>

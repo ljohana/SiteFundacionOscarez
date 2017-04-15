@@ -71,8 +71,9 @@ namespace SitioFundacionOscarez.Controllers
             return View(db.Proyectos.ToList());
         }
 
+        [AllowAnonymous]
         // GET: /Proyectos/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? id, string fuente)
         {
             if (id == null)
             {
@@ -83,6 +84,24 @@ namespace SitioFundacionOscarez.Controllers
             {
                 return HttpNotFound();
             }
+            if (proyectos != null)
+            {
+                ViewBag.Caracteristicas = (from c in db.CaracteristicasxProyecto where c.CodProyecto == id select c).ToList();
+                ViewBag.Resultados = (from r in db.ResultadosxProyecto where r.CodProyecto == id select r).ToList();
+            }
+            ViewBag.Fuente = fuente;
+            switch (fuente)
+	        {
+                case "ProyectosEstudiantes":
+                    ViewBag.Link = "Programas para estudiantes";
+                    break;
+                case "ProyectosInstitucionales":
+                    ViewBag.Link = "Proyectos institucionales";
+                    break;
+                case "ProyectosFortalecimiento":
+                    ViewBag.Link = "Fortalecimiento Social";
+                    break;
+	        }
             return View(proyectos);
         }
 

@@ -1,46 +1,63 @@
-﻿@{
+﻿@model SitioFundacionOscarez.Models.Proyectos
+@{
     ViewBag.Title = "Fundación Oscarez";
 }
 
-
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">
-            Programas y Proyectos
-        </h1>
-    </div>
-    <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Pre saber 11" data-trigger="hover">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Pre_saber.jpg" alt="Pre saber">
-        </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Curso para docentes" data-trigger="hover">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Curso_docentes.jpg" alt="Curso docentes">
-        </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Secuencias de clases" data-trigger="hover">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Secuencias_clases.jpg" alt="Secuencias de clases">
-        </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Gestion Curricular" data-trigger="hover">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Gestion_curricular.jpg" alt="Gestion curricular">
-        </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html" data-toggle="popover" data-placement="top" title="Proyectos" data-content="Tu proyecto de vida" data-trigger="hover">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/Tu_proyecto.jpg" alt="Tu proyecto de vida">
-        </a>
-    </div>
-    <div class="col-md-4 col-sm-6">
-        <a href="portfolio-item.html">
-            <img class="img-responsive img-portfolio img-hover" src="~/Images/proyecto.jpg" alt="">
-        </a>
-    </div>
+
+    @if (@ViewBag.Error == null)
+    {
+        if (ViewBag.Proyectos != null && ViewBag.Proyectos.Count > 0)
+        {
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Programas y Proyectos
+                </h1>
+            </div>
+            foreach (var item in ViewBag.Proyectos)
+            {
+                <div class="col-md-4 col-sm-6">
+                    <a href='@Url.Action("Details", "Proyectos", new { id = @item.id})' data-toggle="popover" data-placement="top" title="Proyectos" data-content="@item.Titulo" data-trigger="hover">
+                        <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/@item.ImagenProyecto" alt="@item.Titulo">
+                    </a>
+                </div>
+            }
+        }
+    }
+    else
+    {
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Atención! </strong> @ViewBag.Error
+        </div>
+    }
 </div>
-<!-- /.row -->
+
+@if (@ViewBag.Error == null)
+{
+    if (@ViewBag.ProyectoAzar != null)
+    {
+        <div class="row">
+            <div class="col-lg-12">
+                <a href='@Url.Action("Details", "Proyectos", new { id = @ViewBag.ProyectoAzar.id})'>
+                    <h2 class="page-header">@ViewBag.ProyectoAzar.Titulo</h2>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <p class="lead" style="text-align: justify; font-weight: bold; font-style: italic;">Descripción</p>
+                <p style=" text-align: justify;">
+                    @ViewBag.ProyectoAzar.Descripcion
+                </p>
+            </div>
+            <div class="col-md-6">
+                <a href='@Url.Action("Details", "Proyectos", new { id = @ViewBag.ProyectoAzar.id})'>
+                    <img class="img-responsive" src="/Images/proyectos/@ViewBag.ProyectoAzar.ImagenProyecto" alt="@ViewBag.ProyectoAzar.Titulo">
+                </a>
+            </div>
+        </div>
+        <hr />
+    }  
+}
 
 <div class="well">
     <div class="row">
