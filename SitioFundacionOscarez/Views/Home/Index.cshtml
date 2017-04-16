@@ -17,7 +17,8 @@
             foreach (var item in ViewBag.Proyectos)
             {
                 <div class="col-md-4 col-sm-6">
-                    <a href='@Url.Action("Details", "Proyectos", new { id = @item.id})' data-toggle="popover" data-placement="top" title="Proyectos" data-content="@item.Titulo" data-trigger="hover">
+                    <p style="text-align: justify; font-weight: bold; font-style: italic;">@item.Titulo</p>
+                    <a href='@Url.Action("Details", "Proyectos", new { id = @item.id})'>
                         <img class="img-responsive img-portfolio img-hover" src="~/Images/proyectos/@item.ImagenProyecto" alt="@item.Titulo">
                     </a>
                 </div>
@@ -69,11 +70,3 @@
         </div>
     </div>
 </div>
-
-@section Scripts{
-<script>
-    $(function () {
-        $('[data-toggle="popover"]').popover()
-    })
-</script>    
-}
