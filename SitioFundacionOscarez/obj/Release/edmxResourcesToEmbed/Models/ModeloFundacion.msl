@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbFundacionModelStoreContainer" CdmEntityContainer="DbFundacionEntities">
+    <EntitySetMapping Name="Contactenos">
+      <EntityTypeMapping TypeName="DbFundacionModel.Contactenos">
+        <MappingFragment StoreEntitySet="Contactenos">
+          <ScalarProperty Name="AvisoPrivacidad" ColumnName="AvisoPrivacidad" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Noticias">
+      <EntityTypeMapping TypeName="DbFundacionModel.Noticias">
+        <MappingFragment StoreEntitySet="Noticias">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Slide" ColumnName="Slide" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="DbFundacionModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaracteristicasxProyecto">
+      <EntityTypeMapping TypeName="DbFundacionModel.CaracteristicasxProyecto">
+        <MappingFragment StoreEntitySet="CaracteristicasxProyecto">
+          <ScalarProperty Name="Caracteristica" ColumnName="Caracteristica" />
+          <ScalarProperty Name="CodProyecto" ColumnName="CodProyecto" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proyectos">
+      <EntityTypeMapping TypeName="DbFundacionModel.Proyectos">
+        <MappingFragment StoreEntitySet="Proyectos">
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="ImagenProyecto" ColumnName="ImagenProyecto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Subtitulo" ColumnName="Subtitulo" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="CodSeccion" ColumnName="CodSeccion" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResultadosxProyecto">
+      <EntityTypeMapping TypeName="DbFundacionModel.ResultadosxProyecto">
+        <MappingFragment StoreEntitySet="ResultadosxProyecto">
+          <ScalarProperty Name="Resultados" ColumnName="Resultados" />
+          <ScalarProperty Name="CodProyecto" ColumnName="CodProyecto" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Secciones">
+      <EntityTypeMapping TypeName="DbFundacionModel.Secciones">
+        <MappingFragment StoreEntitySet="Secciones">
+          <ScalarProperty Name="Seccion" ColumnName="Seccion" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

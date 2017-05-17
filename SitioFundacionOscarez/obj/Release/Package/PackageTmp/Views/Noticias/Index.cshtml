@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SitioFundacionOscarez.Models.Noticias>
+
+@{
+    ViewBag.Title = "Ultimas noticias fundación";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Actualidad <small> - nuestras noticias</small></h2>
+        <ol class="breadcrumb">
+            <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+            <li class="active">Nuestras noticias</li>
+        </ol>
+    </div>
+</div>
+
+@if (@ViewBag.Error == null)
+{
+    foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-md-1 text-center">
+                <p>
+                    <i class="fa fa-book fa-4x"></i>
+                </p>
+                <p>@item.FechaCreacion</p>
+            </div>
+            <div class="col-md-5">
+                <a href="/Noticias/Details/@item.ID"><img class="img-responsive img-hover" src="/Images/noticias/@item.Slide" alt="@item.Titulo"></a>
+            </div>
+            <div class="col-md-6">
+                <h3>
+                    <a href="/Noticias/Details/@item.ID">@item.Titulo</a>
+                </h3>
+                <p>
+                    Publicado por: <a href="/Noticias/Details/@item.ID">Fundación Oscarez</a>
+                </p>
+                <p style=" text-align: justify;">@item.Intro</p>
+                <a class="btn btn-primary" href="/Noticias/Details/@item.ID">Leer Más <i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+        <hr>
+    }
+}
+else
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Atención! </strong> @ViewBag.Error
+    </div>
+}
+
+
